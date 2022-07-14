@@ -1,0 +1,541 @@
+<DOCTYPE html>
+	<html>
+	  <head>
+		<title>Main Report</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("th.sb-heading-style")
+					.siblings("td")
+					.css({"border-top": "3px solid black"});
+			});
+		</script>
+		<style type="text/css">
+			*{
+				box-sizing: border-box;
+			}
+			
+			.heading{
+				padding: 2% 1% 2% 1%;
+				font-weight: bold;
+				text-align: center;
+				color: black;	
+
+			}
+
+			.table-style{
+				border-collapse: collapse;
+			    font-family: Movement , Verdana;
+			    font-size: 12px;
+				border: 1px solid #D3D3D3;
+			    padding: 0.2% 0 0.2% 0;
+				text-align: left;
+			    color: rgb(43, 41, 44);
+			    font-weight: normal;
+			}
+
+			#table-style{
+				width: 98%;
+				margin: 2% 2% 0 1%;
+			}
+			
+			.sb-heading-style {
+				font-weight: bold;
+				font-size: 12px;
+				color: #d93025;
+			}
+			
+			.top-row-style {
+				height: 70px;
+			}
+			
+			.number-box {
+				text-align: center;
+				font-weight: bold;
+			}
+			
+		</style>
+	  </head>
+	  <body>
+	  	<table class="table-style" id="table-style">
+	  	  <tr class="top-row-style">
+		    <th class="heading table-style number-box"></th>
+		    <td class="heading table-style number-box">07</td>
+		    <td class="heading table-style number-box">08</td>
+		    <td class="heading table-style number-box">09</td>
+		    <td class="heading table-style number-box">10</td>
+		    <td class="heading table-style number-box">11</td>
+		    <td class="heading table-style number-box">12</td>
+		    <td class="heading table-style number-box">13</td>
+		    <td class="heading table-style number-box">14</td>
+		    <td class="heading table-style number-box">15</td>
+		    <td class="heading table-style number-box">16</td>
+		    <td class="heading table-style number-box">17</td>
+		    <td class="heading table-style number-box">18</td>
+		    <td class="heading table-style number-box">19</td>
+		    <td class="heading table-style number-box">20</td>
+		    <td class="heading table-style number-box">21</td>
+		    <td class="heading table-style number-box">22</td>
+		    <td class="heading table-style number-box">23</td>
+		    <td class="heading table-style number-box">24</td>
+		    <td class="heading table-style number-box">01</td>
+		    <td class="heading table-style number-box">02</td>
+		    <td class="heading table-style number-box">03</td>
+		    <td class="heading table-style number-box">04</td>
+		    <td class="heading table-style number-box">05</td>
+		    <td class="heading table-style number-box">06</td>
+		  </tr>
+		  <tr>
+		    <th class="sb-heading-style table-style">
+				PUPILS</th>
+		    <td class="table-style" colspan="24"></td>
+		   
+		  </tr>
+		  <tr>
+		    <th class="table-style">
+				Reaction R
+			</th>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		  </tr>
+		  <tr>
+		    <th class="table-style">
+				Reaction L
+			</th>  
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		  </tr>
+		   <tr>
+		    <th class="table-style">
+				Equality
+			</th>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		  </tr>
+		  <tr>
+		    <th class="table-style">
+				Size R
+			</th>  
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		  </tr>
+		   <tr>
+		   <th class="sb-heading-style table-style">
+				COMA SCALE
+			</th>
+		    <td class="table-style" colspan="24"></td>  
+		  </tr>
+		  <tr>
+		    <th class="table-style">Eyes</th>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		  </tr>
+		  <tr>
+		    <th class="table-style">
+				Verbal
+			</th>  
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		  </tr>
+		   <tr>
+		    <th class="table-style">
+				Motor
+			</th>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		  </tr>
+		  <tr>
+		    <th class="table-style">
+				Coma scale Score
+			</th>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		  </tr>
+		  <tr>
+		    <th class="sb-heading-style table-style">
+				LIMBS
+			</th>  
+		   <td class="table-style" colspan="24"></td>
+		  </tr>
+		   <tr>
+		    <th class="table-style">
+				Movement Arms L
+			</th>
+		   <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		  </tr>
+		  <tr>
+		    <th class="table-style">
+				Movement Arms R
+			</th>
+		   <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		  </tr>
+		  <tr>
+		    <th class="table-style">
+				Movement Legs L
+			</th>  
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		  </tr>
+		   <tr>
+		    <th class="table-style">
+				Movement Legs R
+			</th>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		  </tr>
+		  <tr>
+		    <th class="table-style">
+				Strength Arms L
+			</th>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		  </tr>
+		  <tr>
+		    <th class="table-style">
+				Strength Arms R
+			</th>  
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		  </tr>
+		  <tr>
+		    <th class="table-style">
+				Strength Legs L
+			</th>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		    <td class="table-style"></td>
+		  </tr>
+        </table>
+	</body>
+</html>

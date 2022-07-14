@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <style>
+         body {
+			 background-image: url('download.jpeg');
+			 font-size: 16px; 
+			 font-family: Times New Roman;
+         }
+         .first,.second {
+			 background-color: gray;
+			 text-align: center;
+			 color: white;
+			 height: 20px;
+			 border-radius: 5px;
+			 font-size: 16px;
+			 font-weight: bolder;
+         }
+         .third{
+         background-color: red;
+         color: white;
+         text-align: center;
+         height: 30px;
+         border-radius: 5px;
+         height: 20px;
+         font-size: 16px;
+         font-weight: bolder;
+         }
+         .fourth{
+         background-color:rgb(253, 85, 24);
+         color: white;
+         text-align: center;
+         height: 30px;
+         border-radius: 5px;
+         height: 20px;
+         font-size: 16px;
+         font-weight: bolder;
+         }
+         .fifth{
+         background-color:yellow;
+         color:black;
+         text-align: center;
+         height: 30px;
+         border-radius: 5px;
+         height: 20px;
+         font-size: 16px;
+         font-weight: bolder;
+         }
+         .sixth{
+         background-color:blue;
+         color: white;
+         text-align: center;
+         height: 30px;
+         border-radius: 5px;
+         height: 20px;
+         font-size: 16px;
+         font-weight: bolder;
+         }
+         .seven,.eight{
+         background-color: gray;
+         text-align: center;
+         color: white;
+         border-radius: 5px;
+         height: 20px;
+         font-size: 16px;
+         font-weight: bolder;
+         }
+         .inputbox {
+         width: 125px;
+         height: 20px;
+         }
+         .lbltotal{
+			text-align: center;
+         }
+         .res-col-1{
+			 width: 9%;
+			 text-align: left;
+         }
+         .res-col-2 {
+			width: 55%;
+         }
+		.modal {
+		  display: none;
+		  position: fixed;
+		  z-index: 1;
+		  padding-top: 0px;
+		  left: 0;
+		  top: 0;
+		  width: 100%;
+		  height: 100%;
+		  background-color: rgb(0,0,0);
+		  background-color: rgba(0,0,0,0.4);
+		}
+
+		.modal-content {
+		  background-color: #fefefe;
+		  margin: auto;
+		  padding: 20px;
+		  padding-bottom: 0px;
+		  border: 1px solid #888;
+		  width: 80%;
+		  height: 100%;
+		}
+
+		.close {
+		  color: black;
+		  float: right;
+		  font-size: 28px;
+		  font-weight: bolder;
+		}
+
+		.close:hover, .close:focus {
+		  color: black;
+		  text-decoration: none;
+		  cursor: pointer;
+		}
+		.headerdiv{
+            margin-left: 35%;
+			overflow-y: scroll;
+        }
+		.btn1, .btn2{
+			width: 100px;
+		}
+		.namediv{
+			background-color: gray;
+			border-radius: 2px;
+			font-size: 20px;
+			font-weight: bolder;
+			height: 30px;
+		}
+        .datesty,.pulse,.sbp,.dbp,.rr,.o2,.sup,.temp,.avpu,.gcs,.mobility,.trauma{
+          color:rgba(0, 217, 255, 0.986);
+        }
+        #check,#given,#handover{
+            color: red;
+        }
+		.formtext {
+			width: 100px;
+		}    
+		.vitals-row-1 {
+			text-align: right;
+		}
+		.vitals-row-2, .vitals-row-3 {
+			text-align: left;
+			padding-left: 15px;
+		}
+		
+		.vitals-txt {
+			width: 130px;
+			height: 25px;
+		}
+      .closebtnstyle{
+         text-align:right;
+         font-weight:bolder; 
+         color:black;
+      }
+  
+      </style>
+      <script>
+         
+		 function launch() {
+			var modal = document.getElementById("myModal");
+			var btn = document.getElementById("btnlaunch");   
+			var span = document.getElementsByClassName("close")[9];		
+			modal.style.display = "block";
+		 }
+		 
+		 function closeme() {
+			var modal = document.getElementById("myModal");
+			modal.style.display = "none";
+		 }
+          
+      </script>
+   </head>
+   <body>
+      <div class="container-fluid p-2 my-2">
+         <div class="row">
+            <div class="col-sm-2">
+               <h5 class="first">EMS Notes</h5>
+               <span class="firstcol">Presenting Complaints:</span><br>
+               <span class="firstcol">Onset:</span><br>
+               <span class="firstcol">Hx:</span><br>
+               <span class="firstcol">Allergies:</span><br>
+               <span class="firstcol">illness:</span><br>
+               <span class="firstcol">Vitals:</span><br>
+               <span class="firstcol">P:200</span><br>
+               <span class="firstcol">BP: /98</span><br>
+               <span class="firstcol">RR: /78</span><br>
+               <span class="firstcol">O2 Sat:24</span><br>
+               <span class="firstcol">Supplimental O2:</span><br>
+               <span class="firstcol">T:43</span><br>
+               <span class="firstcol">AVPU:V</span><br>
+               <span class="firstcol">GCS:0</span><br>
+               <span class="firstcol">Trauma:</span><br>
+               <span class="firstcol">Mobility:</span><br>
+               <span class="firstcol">Treatment:</span><br><br>
+               <h5 class="second">Triage History</h5>
+               <input type="checkbox" class="me-2" name="Abdominal Pain">Abdominal Pain<br>
+               <input type="checkbox" class="me-2" name="Bachache">Bachache<br>
+               <input type="checkbox" class="me-2" name="Diabetes">Diabetes<br>
+               <input type="checkbox" class="me-2" name="Bleeding Hx">Bleeding Hx<br>
+               <input type="checkbox" class="me-2" name="Bleeding PO,PR or Trauma Site">Bleeding PO,PR or Trauma Site<br>
+               <input type="checkbox" class="me-2" name="Bleeding PV">Bleeding PV<br>
+            </div>
+            <div class="col-sm-4">
+               <h5 class="third">Emergency</h5>
+               <div class="row">
+                  <div class="col-sm-12">
+                     <input type="checkbox" class="me-2" name="Obstructed Airway-not breathing">Obstructed Airway-not breathing<br>
+                     <input type="checkbox" class="me-2" name="Seizure-current">Seizure-current<br>
+                     <input type="checkbox" class="me-2" name="Burn-facial/inhalation">Burn-facial/inhalation<br>
+                     <input type="checkbox" class="me-2" name="Hypoglycaemia-glucose 3">Hypoglycaemia-glucose 3<br>
+                     <input type="checkbox" class="me-2" name="Cardiac arrest">Cardiac arrest<br>
+                  </div>
+               </div>
+               <h5 class="fourth">Very Urgent</h5>
+               <div class="row">
+                  <div class="col-sm-6">
+                     <input type="checkbox" class="me-2 veryurgent">High energy transfer<br>
+                     <input type="checkbox" class="me-2 veryurgent">SOB-acute<br>
+                     <input type="checkbox" class="me-2 veryurgent">LOC reduced/confused<br>
+                     <input type="checkbox" class="me-2 veryurgent">coughing blood<br>
+                     <input type="checkbox" class="me-2 veryurgent">chest pain<br>
+                     <input type="checkbox" class="me-2 veryurgent">Stabbed neck<br>
+                     <input type="checkbox" class="me-2 veryurgent">Heamorrhage-uncontrolled<br>
+                     <input type="checkbox" class="me-2 veryurgent">Seizure-post ictal<br>
+                     <input type="checkbox" class="me-2 veryurgent">Focal neurology-acute(stroke)<br>
+                     <input type="checkbox" class="me-2 veryurgent">Aggression<br>
+                     <input type="checkbox" class="me-2 veryurgent">Threatened limn<br>
+                     <input type="checkbox" class="me-2 veryurgent">Eye injury<br>
+                  </div>
+                  <div class="col-sm-6">
+                     <input type="checkbox" class="me-2 veryurge">Dislocation of large joint<br>
+                     <input type="checkbox" class="me-2 veryurge">Fracture-compound<br>
+                     <input type="checkbox" class="me-2 veryurge">Burn over 20%<br>
+                     <input type="checkbox" class="me-2 veryurge">Burn-electrical<br>
+                     <input type="checkbox" class="me-2 veryurge">Burn-circumferential<br>
+                     <input type="checkbox" class="me-2 veryurge">Burn-chemical<br>
+                     <input type="checkbox" class="me-2 veryurge">Poisoning/overdose<br>
+                     <input type="checkbox" class="me-2 veryurge">Diabetic-glucose>11 & ketonuria<br>
+                     <input type="checkbox" class="me-2 veryurge">Vomiting fresh blood<br>
+                     <input type="checkbox" class="me-2 veryurge">Pregnancy and abdominal trauma<br>
+                     <input type="checkbox" class="me-2 veryurge">Pregnancy and abdominal pain<br>
+                     <input type="checkbox" class="me-2 veryurge">Severe pain<br><br>
+                  </div>
+               </div>
+               <h5 class="fifth">Urgent</h5>
+               <input type="checkbox" class="me-2">Heamorhage-controlled<br>
+               <input type="checkbox" class="me-2">Dislocation of finger OR toe<br>
+               <input type="checkbox" class="me-2">Fracture-closed<br>
+               <input type="checkbox" class="me-2">Burn-other<br>
+               <input type="checkbox" class="me-2">Abdominal pain<br>
+               <input type="checkbox" class="me-2">Diabetic-glucose over 17(no ketonuria)<br>
+               <input type="checkbox" class="me-2">Vomiting persistently<br>
+               <input type="checkbox" class="me-2">Pregnancy and trauma<br>
+               <input type="checkbox" class="me-2">Pregnancy and PV bleed<br>
+               <input type="checkbox" class="me-2">Moderate pain<br>
+               <h5 class="sixth" >Deceased</h5>
+               <input type="checkbox" class="me-2">Deceased<br>
+            </div>
+            <div class="col-sm-3">
+               <h5 class="seven">Vitals</h5>
+               <form>
+                  <table>
+                     <tr>
+                        <td><b>Recorded At:</b></td>
+                        <td class="datesty">Date <input type="date" id="datepickerfield" class="inputbox"></td>
+                        <td>Time</td>
+                        <td><input type="time" id="recordedtime" style="height:20px;"></td>
+                     </tr>
+                     <tr>
+                        <td class="pulse">Pulse:</td>
+                        <td><input type="text" id="txtpulse" class="inputbox"></td>
+                        <td></td>
+                        <td align="right"><span id="lblpulse">3</span></td>
+                     </tr>
+                     <tr>
+                        <td class="sbp">s BP:</td>
+                        <td><input type="text" id="txtsbp" class="inputbox"></td>
+                        <td></td>
+                        <td align="right">1</td>
+                     </tr>
+                     <tr>
+                        <td class="dbp">d BP:</td>
+                        <td><input type="text" id="txtdbp" class="inputbox"></td>
+                     </tr>
+                     <tr>
+                        <td class="rr">RR:</td>
+                        <td><input type="text" id="txtrr" class="inputbox"></td>
+                        <td></td>
+                        <td align="right"><span id="lblrr">3</span></td>
+                     </tr>
+                     <tr>
+                        <td class="o2">O2 sat:</td>
+                        <td><input type="text" id="txto2sat" class="inputbox"></td>
+                     </tr>
+                     <tr>
+                        <td class="sup">Sup O2:</td>
+                        <td>
+                           <select id="lstsupo2" class="inputbox">
+                              <option value=""></option>
+                           </select>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="temp">Temp:</td>
+                        <td><input type="text" id="txttemp" class="inputbox"></td>
+                        <td></td>
+                        <td align="right"><span id="lbltemp">2</span></td>
+                     </tr>
+                     <tr>
+                        <td class="avpu">AVPU:</td>
+                        <td>
+                           <select id="lstavpu" class="inputbox">
+                              <option value="">Reacts to voio</option>
+                           </select>
+                        </td>
+                        <td></td>
+                        <td align="right"><span id="lblavpu">1</span></td>
+                     </tr>
+                     <tr>
+                        <td class="gcs">GCS:</td>
+                        <td>
+                           <select id="lstgcs" class="inputbox">
+                              <option value=""><span id="lblgcs">0</span></option>
+                           </select>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="mobility">Mobility:</td>
+                        <td>
+                           <select id="lstmobility" class="inputbox">
+                              <option value=""></option>
+                           </select>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="trauma">Trauma:</td>
+                        <td>
+                           <select id="lsttrauma" class="inputbox">
+                              <option value=""></option>
+                           </select>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>Total TEWS </td>
+                        <td><span id="lbltotal" class="lbltotal">4</span>
+                     </tr>
+                  </table>
+               </form>
+            </div>
+            <div class="col-sm-3">
+               <h5 class="eight">Actions</h5>
+               <div class="row">
+                  <div class="col-sm-12">
+                     <table>
+                        <tr>
+                           <th class="res-col-1"></th>
+                           <th class="res-col-2"></th>
+                           <th><b>Results</b></th>
+                        </tr>
+                        <tr>
+                           <td class="res-col-1"><input type="checkbox" id="chkspo2"/></td>
+                           <td class="res-col-2" id="check">SpO2 Checked</td>
+                           <td><input type="text" id="txtsp02" class="inputbox"></td>
+                        </tr>
+                        <tr>
+                           <td class="res-col-1"><input type="checkbox" id="chko2"/></td>
+                           <td class="res-col-2" id="given">O2 given</td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td class="res-col-1"><input type="checkbox" id="chkecg"/></td>
+                           <td class="res-col-2">Immediate ECG</td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td class="res-col-1"><input type="checkbox" id="chkiv"/></td>
+                           <td class="res-col-2">IV</td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td class="res-col-1"><input type="checkbox" id="chkresus"/></td>
+                           <td class="res-col-2">Move to Resus</td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td class="res-col-1"><input type="checkbox" id="chkfinger"/></td>
+                           <td class="res-col-2">Finger Prick Glouco Test</td>
+                           <td><input type="text" id="txtfinger" class="inputbox"></td>
+                        </tr>
+                        <tr>
+                           <td class="res-col-1"><input type="checkbox" id="chkfooddrink"/></td>
+                           <td class="res-col-2">Give Food or drink</td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td class="res-col-1"><input type="checkbox" id="chkdisp"/></td>
+                           <td class="res-col-2">Urine Dipsticks(+ketones)</td>
+                           <td><input type="text" id="txturine" class="inputbox"></td>
+                        </tr>
+                        <tr>
+                           <td class="res-col-1"><input type="checkbox" id="chkprag"/></td>
+                           <td class="res-col-2">Urine pragnancy test</td>
+                           <td>
+                              <select class="inputbox" id="lstpreg">
+                                 <option></option>
+                              </select>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td class="res-col-1"><input type="checkbox" id="chkpostat"/></td>
+                           <td class="res-col-2">Paracetamol 1g PO stat</td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td class="res-col-1"><input type="checkbox" id="chkblank"/></td>
+                           <td class="res-col-2">Warm with blankets</td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td class="res-col-1"><input type="checkbox" id="chkhb"/></td>
+                           <td class="res-col-2">Finger prick Hb</td>
+                           <td><input type="text" id="txtfingerhb" class="inputbox"></td>
+                        </tr>
+                        <tr>
+                           <td class="res-col-1"><input type="checkbox" id="chksphc"/></td>
+                           <td class="res-col-2" id="handover">Handover to SHPC</td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td class="res-col-1"></td>
+                           <td class="res-col-2">
+								<input type="button" id="btnlaunch" onclick="launch()"value="Launch Vital Form"></input>
+                           <td>
+                           <td></td>
+                        </tr>
+                     </table>
+                     <div id="myModal" class="modal">
+                        <div class="modal-content">
+						   <div class="row namediv">
+							   <div class="col-sm-6">
+									<span id="personname">Neuro Vital-Bounce,David 81 M</span>
+							   </div>
+							   <div class="col-sm-6 closebtnstyle" >
+									<span class="close" onclick="closeme()">&times;</span>
+							   </div>
+						   </div>
+                           
+                           <div class="headerdiv">
+                              <form align="center">
+                                 <table>
+                                    <tr>
+                                       <td class="vitals-row-1"></td>
+                                       <td class="vitals-row-2">Date</td>
+                                       <td class="vitals-row-3">Time</td>
+                                    </tr>
+                                    <tr>
+                                       <td class="vitals-row-1"><b>Vitals:</b></td>
+                                       <td class="vitals-row-2">
+										<input type="text" class="vitals-txt">
+									   </td>
+                                       <td class="vitals-row-3"><input type="text" class="vitals-txt"></td>
+                                    </tr>
+                                    <tr>
+                                       <td class="vitals-row-1">Reaction L:</td>
+                                       <td class="vitals-row-2">
+                                          <select class="vitals-txt" id="lstreationvital1">
+                                             <option></option>
+                                          </select>
+                                       </td>
+									   <td class="vitals-row-3"></td>
+                                    </tr>
+                                    <tr>
+                                       <td class="vitals-row-1">Reaction R:</td>
+                                       <td class="vitals-row-2">
+                                          <select class="vitals-txt" id="lstreationrvital">
+                                             <option></option>
+                                          </select>
+                                       </td>
+									   <td class="vitals-row-3"></td>
+                                    </tr>
+                                    <tr>
+                                       <td class="vitals-row-1">Equality:</td>
+                                       <td class="vitals-row-2">
+                                          <select class="vitals-txt" id="lstequalityvital">
+                                             <option></option>
+                                          </select>
+                                       </td>
+									   <td class="vitals-row-3"></td>
+                                    </tr>
+                                    <tr>
+                                       <td class="vitals-row-1">Size L:</td>
+                                       <td class="vitals-row-2">
+                                          <input type="text" id="txtsizel" class="vitals-txt" id="lstsizevital"/>
+									   </td>
+                                       <td class="vitals-row-3">mm</td>
+                                    </tr>
+                                    <tr>
+                                       <td class="vitals-row-1">Size R:</td>
+                                       <td class="vitals-row-2">
+                                          <input type="text" id="txtsizer" class="vitals-txt" id="lstvitalsizer"/>
+									   </td>	  
+                                       <td class="vitals-row-3">mm</td>
+                                    </tr>
+                                    <tr>
+                                       <td class="vitals-row-1">Eyes:</td>
+                                       <td class="vitals-row-2">
+                                          <select class="vitals-txt" id="lstvitaleyes">
+                                             <option value="0"></option>
+                                          </select>
+                                       </td>
+									   <td class="vitals-row-3"></td>
+                                    </tr>
+                                    <tr>
+                                       <td class="vitals-row-1">Verbal:</td>
+                                       <td class="vitals-row-2">
+                                          <select class="vitals-txt" id="lstvitalsverbal">
+                                             <option></option>
+                                          </select>
+                                       </td>
+									   <td class="vitals-row-3"></td>
+                                    </tr>
+                                    <tr>
+                                       <td class="vitals-row-1">Motor:</td>
+                                       <td class="vitals-row-2">
+                                          <select class="vitals-txt" id="lstvitalsmotor">
+                                             <option></option>
+                                          </select>
+                                       </td>
+									   <td class="vitals-row-3"></td>
+                                    </tr>
+                                    <tr>
+                                       <td class="vitals-row-1">Movement Arms L:</td>
+                                       <td class="vitals-row-2">
+                                          <select class="vitals-txt" id="lstvitalmoverarml">
+                                             <option></option>
+                                          </select>
+                                       </td>
+									   <td class="vitals-row-3"></td>
+                                    </tr>
+                                    <tr>
+                                       <td class="vitals-row-1">Movement Arms R:</td>
+                                       <td class="vitals-row-2">
+                                          <select class="vitals-txt" id="lstvitalmovearmr">
+                                             <option></option>
+                                          </select>
+                                       </td>
+									   <td class="vitals-row-3"></td>
+                                    </tr>
+                                    <tr>
+                                       <td class="vitals-row-1">Movement Legs L:</td>
+                                       <td class="vitals-row-2">
+                                          <select class="vitals-txt" id="lstvitalsmovelegl">
+                                             <option></option>
+                                          </select>
+                                       </td>
+									   <td class="vitals-row-3"></td>
+                                    </tr>
+                                    <tr>
+                                       <td class="vitals-row-1">Movement Legs R:</td>
+                                       <td class="vitals-row-2">
+                                          <select class="vitals-txt" id="lstvitalsmovelegr">
+                                             <option></option>
+                                          </select>
+                                       </td>
+									   <td class="vitals-row-3"></td>
+                                    </tr>
+                                    <tr>
+                                       <td class="vitals-row-1">Strength Arms L:</td>
+                                       <td class="vitals-row-2">
+                                          <select class="vitals-txt" id="lstvitalsstrengtharml">
+                                             <option></option>
+                                          </select>
+                                       </td>
+									   <td class="vitals-row-3"></td>
+                                    </tr>
+                                    <tr>
+                                       <td class="vitals-row-1">Strength Arms R:</td>
+                                       <td class="vitals-row-2">
+                                          <select class="vitals-txt" id="lstvitalsstrengtharmr">
+                                             <option></option>
+                                          </select>
+                                       </td>
+									   <td class="vitals-row-3"></td>
+                                    </tr>
+                                    <tr>
+                                       <td class="vitals-row-1">Strength Legs L:</td>
+                                       <td class="vitals-row-2">
+                                          <select class="vitals-txt" id="lstvitalsstrengthlegsl">
+                                             <option></option>
+                                          </select>
+                                       </td>
+									   <td class="vitals-row-3"></td>
+                                    </tr>
+                                    <tr>
+                                       <td class="vitals-row-1">Strength Legs R:</td>
+                                       <td class="vitals-row-2">
+                                          <select class="vitals-txt" id="lstvitalsstrengthlegsr">
+                                             <option></option>
+                                          </select>
+                                       </td>
+									   <td class="vitals-row-3"></td>
+                                    </tr>
+                                    <tr>
+                                       <td class="vitals-row-1">Siezure:</td>
+                                       <td class="vitals-row-2">
+                                          <select class="vitals-txt" id="lstvitalssiezure">
+                                             <option></option>
+                                          </select>
+                                       </td>
+									   <td class="vitals-row-3"></td>
+                                    </tr>
+                                    <tr>
+                                       <td class="vitals-row-1">Duration:</td>
+                                       <td class="vitals-row-2">
+                                          <input type="text" class="vitals-txt" id="lstvitalsduration"></td>
+                                       <td class="vitals-row-3">min</td>
+                                    </tr>
+                                    <tr>
+                                       <td class="vitals-row-1">CSF Drainage:</td>
+                                       <td class="vitals-row-2">
+                                          <input type="text" class="vitals-txt" id="lstvitalscsf"/></td>
+                                       <td class="vitals-row-3">ml</td>
+                                    </tr>
+                                    <tr>
+                                       <td class="vitals-row-1">MAP:</td>
+                                       <td class="vitals-row-2">
+                                          <input type="text" class="vitals-txt" id="lstvitalscsf"></td>
+                                       <td class="vitals-row-3">mmHg</td>
+                                    </tr>
+                                    <tr>
+                                       <td class="vitals-row-1">ICP:</td>
+                                       <td class="vitals-row-2">
+                                          <input type="text" class="vitals-txt" id="lstvitalsicp"></td>
+                                       <td class="vitals-row-3">mm</td>
+                                    </tr>
+                                    <tr>
+                                       <td class="vitals-row-1">CPP:</td>
+                                       <td class="vitals-row-2">
+                                          <input type="text" class="vitals-txt" id="lstvitalscpp"></td>
+                                       <td class="vitals-row-3">mmHg</td>
+                                    </tr>
+                                    <tr>
+                                       <td class="vitals-row-1">Cerebral O2:</td>
+                                       <td class="vitals-row-2">
+                                          <input type="text" class="vitals-txt" id="lstvitalscerebral"></td>
+                                       <td class="vitals-row-3">%</td>
+                                    </tr>
+                                    <tr>
+                                       <td class="vitals-row-1">Cerebral Temp:</td>
+                                       <td class="vitals-row-2">
+                                          <input type="text" class="vitals-txt" id="lstvitalstemp"></td>
+                                       <td class="vitals-row-3">C</td>
+                                    </tr>
+                                 </table>
+                              </form>
+                           </div>
+						   <hr/>
+						   <div class="row">
+							   <div class="col-sm-6">
+									<input type="button" class="btn1"  value="Cancel" align="left" onclick="closeme()">
+							   </div>
+							   <div class="col-sm-6" style="text-align:right;">
+									<input type="button" class="btn2" value="Submit" align="right"onclick="alert('Form submit successfully!');"> 
+							   </div>
+						   </div>
+					   </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
